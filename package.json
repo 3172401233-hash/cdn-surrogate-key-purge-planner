@@ -1,0 +1,15 @@
+{
+  "name": "cdn-surrogate-key-purge-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "规划按 surrogate key 清理 CDN 对象：软失效、硬删除、分批刷新，避免回源风暴",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "plan": "node bin/plan.js"
+  }
+}

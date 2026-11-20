@@ -1,0 +1,24 @@
+{
+  "tags": ["promo-2026", "user:42"],
+  "objects": [
+    { "id": "/api/promo/banner", "tags": ["promo-2026"], "ttlSeconds": 3600, "requestsPerSecond": 120 },
+    { "id": "/api/promo/rules", "tags": ["promo-2026"], "ttlSeconds": 300, "requestsPerSecond": 45 },
+    { "id": "/api/user/42/profile", "tags": ["user:42"], "ttlSeconds": 60, "requestsPerSecond": 5 },
+    { "id": "/api/user/42/orders", "tags": ["user:42", "orders"], "ttlSeconds": 30, "requestsPerSecond": 8 },
+    { "id": "/api/static/logo.png", "tags": ["static"], "ttlSeconds": 86400, "requestsPerSecond": 300 }
+  ],
+  "regions": [
+    { "name": "us-east", "propagationSeconds": 15 },
+    { "name": "eu-west", "propagationSeconds": 45 },
+    { "name": "ap-south", "propagationSeconds": 120 },
+    { "name": "sa-east-slow", "propagationSeconds": 900 }
+  ],
+  "origin": { "maxRequestsPerSecond": 200 },
+  "options": {
+    "safetyMargin": 0.8,
+    "roundIntervalSeconds": 30,
+    "propagationBudgetSeconds": 300,
+    "softWindowSeconds": 60,
+    "refreshBatchIntervalSeconds": 10
+  }
+}
